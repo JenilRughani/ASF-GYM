@@ -132,7 +132,5 @@ struct FinalDisplayWorkoutview: View {
 }
 
 #Preview {
-        FinalDisplayWorkoutview(cat: arrOFWorkout[0], workoutCatModel: WorkoutCatModel(bodyPart: "back", equipment: "cable", gifUrl: "https://v2.exercisedb.io/image/mSd0oEMgSMe2YH", name: "alternate lateral pulldown", target: "lats", secondaryMuscles: "biceps,rhomboids", instructions: "Sit on the cable machine with your back straight and feet flat on the ground.\n,Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.\n,Lean back slightly and pull the handles towards your chest, squeezing your shoulder blades together.\n,Pause for a moment at the peak of the movement, then slowly release the handles back to the starting position.\nRepeat for the desired number of repetitions."))
+    FinalDisplayWorkoutview(cat: arrOFWorkout[0], workoutCatModel: WorkoutCatModel(bodyPart: "back", equipment: "cable", gifUrl: "https://v2.exercisedb.io/image/mSd0oEMgSMe2YH", name: "alternate lateral pulldown", target: "lats", secondaryMuscles: "biceps,rhomboids", instructions: "Sit on the cable machine with your back straight and feet flat on the ground.\n,Grasp the handles with an overhand grip, slightly wider than shoulder-width apart.\n,Lean back slightly and pull the handles towards your chest, squeezing your shoulder blades together.\n,Pause for a moment at the peak of the movement, then slowly release the handles back to the starting position.\nRepeat for the desired number of repetitions."))
 }
-
-

@@ -11,7 +11,6 @@ import UserNotifications
 struct NotifyView: View {
     
     @StateObject var notificationManager = NotificationManagerViewModel()
-    
     var arrOfNotiufy: [NotificationModel] = [
         NotificationModel(id: UUID().uuidString, title: "hii", body: "welcome to Asf GYM", date: getCurrentDate()),
         NotificationModel(id: UUID().uuidString, title: "Hello", body: "it's Gym Time!", date: getCurrentDate()),

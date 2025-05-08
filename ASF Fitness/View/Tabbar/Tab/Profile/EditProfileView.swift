@@ -241,7 +241,6 @@ struct EditProfileView: View {
         }
         .onAppear() {
             //TODO:- Add the Firebase get User details Info
-            
             self.verification = loadUserInfo(userInfoData: userInfoDetail)?.login ?? LoginVerification.EmailAndPassAuth
             self.img = loadUserInfo(userInfoData: userInfoDetail)?.photo ?? ""
             self.fName = loadUserInfo(userInfoData: userInfoDetail)?.fName ?? "Jason Mann"

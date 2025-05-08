@@ -41,7 +41,6 @@ struct CustomShareView: View {
                         .foregroundStyle(Color("bluePurple"))
                 }
                 
-                
                 HStack {
                     Text("2.")
                     

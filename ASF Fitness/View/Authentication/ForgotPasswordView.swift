@@ -33,7 +33,6 @@ struct ForgotPasswordView: View {
                 .lineLimit(3)
                 .padding(.bottom)
             
-            
             TextField("Email", text: $email)
                 .padding()
                 .foregroundColor(.black)

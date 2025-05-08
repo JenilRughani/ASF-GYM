@@ -9,7 +9,6 @@ import SwiftUI
 import Kingfisher
 
 struct SpecificCategoryView: View {
-    
     var cat: WorkoutModel
     @StateObject var workoutVM = WorkoutCategoryViewModel()
     

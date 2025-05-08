@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
- 
+
 
 struct MyStatusView: View {
     
@@ -16,12 +16,9 @@ struct MyStatusView: View {
     @State private var isOpenListView: Bool = false
     @State private var isLoadData: Bool = false
     @State private var latestEntry: HealthModel? = nil
-    
     @State private var isAnimating = false
-    
     @State private var circleProgress: CGFloat = 0.75
     private var circlePercentage: Int { Int(circleProgress * 100.0) }
-    
     @EnvironmentObject var healthDataVM: HealthViewModel
     
     var body: some View {
@@ -66,7 +63,7 @@ struct MyStatusView: View {
                     }
                 })
                 .padding()
-                        
+                
                 if  latestEntry != nil {
                     
                     ScrollView(showsIndicators: false) {
@@ -351,7 +348,7 @@ struct MyStatusView: View {
                         }
                         .padding([.bottom,.horizontal])
                     }
-                   
+                    
                     HStack {
                         
                         Button {
@@ -452,7 +449,7 @@ struct MyStatusView: View {
                 
                 Spacer()
             }
-         
+            
             if isOpenShareView {
                 CustomShareView(model: healthDataVM.latestHealthData()!, isOpen: $isOpenShareView)
             }

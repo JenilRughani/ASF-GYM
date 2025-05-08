@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
- 
+
 
 struct DisplayAllHealthData: View {
-    
     @State private var isStartLoader: Bool = false
     @EnvironmentObject var healthDataVM: HealthViewModel
     
@@ -47,10 +46,9 @@ struct DisplayAllHealthData: View {
             .padding([.bottom, .horizontal])
             
             if healthDataVM.healthData.isEmpty {
-                
                 Spacer()
                 
-                    Image("noData")
+                Image("noData")
                     .resizable()
                     .frame(width: 150, height: 150)
                     .scaledToFit()
@@ -60,7 +58,6 @@ struct DisplayAllHealthData: View {
                     .foregroundStyle(.gray)
                 
                 Spacer()
-                
             } else {
                 List {
                     ForEach(healthDataVM.healthData.sorted(by: { $0.dateTime > $1.dateTime })) { data in

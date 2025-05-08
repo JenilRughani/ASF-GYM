@@ -13,19 +13,15 @@ struct ProfileView: View {
     @State private var img: String = ""
     @State private var name: String = ""
     @State private var email: String = ""
-    @State private var verification: LoginVerification = .EmailAndPassAuth
-    
-    @EnvironmentObject var emailAuthVM : EmailAuthenticationViewModel
-    @EnvironmentObject var googleAuthVM : GoogleAutheticationViewModel
-    
     @State private var isEditView: Bool = false
     @State private var isLoader: Bool = false
     @State private var isLogout: Bool = false
     @State private var isLogoutAction: Bool = false
-    
-    @AppStorage("userInfoDetail") var userInfoDetail: Data = Data()
-    
+    @State private var verification: LoginVerification = .EmailAndPassAuth
+    @EnvironmentObject var emailAuthVM : EmailAuthenticationViewModel
+    @EnvironmentObject var googleAuthVM : GoogleAutheticationViewModel
     @EnvironmentObject var healthDataVM: HealthViewModel
+    @AppStorage("userInfoDetail") var userInfoDetail: Data = Data()
     
     var body: some View {
         VStack {
@@ -89,7 +85,7 @@ struct ProfileView: View {
                                 .environmentObject(healthDataVM)
                         } label: {
                             HStack {
-                               Text("Add Health Data:")
+                                Text("Add Health Data:")
                                 
                                 Spacer()
                                 
@@ -107,7 +103,7 @@ struct ProfileView: View {
                                 .environmentObject(healthDataVM)
                         } label: {
                             HStack {
-                               Text("List Of Health Data:")
+                                Text("List Of Health Data:")
                                 
                                 Spacer()
                                 
@@ -142,7 +138,7 @@ struct ProfileView: View {
                                 .navigationBarBackButtonHidden()
                         } label: {
                             HStack {
-                               Text("About Us")
+                                Text("About Us")
                                 
                                 Spacer()
                                 
@@ -160,7 +156,7 @@ struct ProfileView: View {
                                 .navigationBarBackButtonHidden()
                         } label: {
                             HStack {
-                               Text("Contact Us")
+                                Text("Contact Us")
                                 
                                 Spacer()
                                 
@@ -178,7 +174,7 @@ struct ProfileView: View {
                                 .navigationBarBackButtonHidden()
                         } label: {
                             HStack {
-                               Text("Terms & Condition")
+                                Text("Terms & Condition")
                                 
                                 Spacer()
                                 
@@ -195,7 +191,7 @@ struct ProfileView: View {
                             SKStoreReviewController.requestReview()
                         }, label: {
                             HStack {
-                               Text("Rate The App")
+                                Text("Rate The App")
                                 
                                 Spacer()
                                 
@@ -231,7 +227,7 @@ struct ProfileView: View {
                             }
                         }, label: {
                             HStack {
-                               Text("Edit Account")
+                                Text("Edit Account")
                                 
                                 Spacer()
                                 
@@ -254,7 +250,7 @@ struct ProfileView: View {
                             }
                         }, label: {
                             HStack {
-                               Text("Sign OUT")
+                                Text("Sign OUT")
                                 
                                 Spacer()
                                 
@@ -302,7 +298,6 @@ struct ProfileView: View {
         }
         .onAppear() {
             //TODO:- Add the Firebase get User details Info
-            
             self.verification = loadUserInfo(userInfoData: userInfoDetail)?.login ?? LoginVerification.EmailAndPassAuth
             self.img = loadUserInfo(userInfoData: userInfoDetail)?.photo ?? ""
             self.name = loadUserInfo(userInfoData: userInfoDetail)?.fName ?? "Jason Mann"

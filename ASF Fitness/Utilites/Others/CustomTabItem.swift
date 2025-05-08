@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct CustomTabItem: View {
-    
     var img: String
     var name: String
     

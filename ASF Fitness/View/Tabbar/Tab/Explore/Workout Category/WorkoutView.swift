@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WorkoutView: View {
-    
     var name: String
     var img: String
     var color: LinearGradient

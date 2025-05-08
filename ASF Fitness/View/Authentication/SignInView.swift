@@ -122,20 +122,6 @@ struct SignInView: View {
                         }
                     }
                     
-                    //MARK: - forgot Passord
-//                    HStack {
-//                        Spacer()
-//                        
-//                        Button(action: {
-//                            
-//                        }, label: {
-//                            Text("Forgot Password?")
-//                                .foregroundStyle(.gray)
-//                        })
-//                        
-//                    }
-//                    .padding([.top, .trailing])
-                    
                     //MARK: - Login Button
                     Button(action: {
                         if email.isEmpty || password.isEmpty {

@@ -30,7 +30,7 @@ struct TermsAndconditionView: View {
                                 Image("ASF")
                                     .resizable()
                                     .scaledToFit()
-                                                .frame(width: 130)
+                                    .frame(width: 130)
                                     .foregroundStyle(.white)
                             }
                     }
@@ -55,7 +55,7 @@ These terms and conditions for a website set out key issues such as acceptable u
                     Text("Usage Restrictions")
                         .font(Font.caustenFont(customFontName: .CaustenBold, fontSize: 22))
                         .padding(.horizontal)
-                        
+                    
                     Spacer()
                 }
                 

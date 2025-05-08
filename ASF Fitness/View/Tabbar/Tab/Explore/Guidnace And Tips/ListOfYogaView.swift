@@ -37,7 +37,7 @@ struct ListOfYogaView: View {
                     Spacer()
                 }
                 .padding()
-            
+                
                 Spacer()
                     .frame(height: 50)
                 

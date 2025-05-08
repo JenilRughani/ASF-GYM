@@ -14,7 +14,6 @@ struct ASFRootView: View {
     @AppStorage("isWelcome") var isSignInView: Bool = false
     @AppStorage("login_Status") var isLogin: Bool = false
     
-    
     //MARK: - Font Testing Medthod
     init() {
         for familyName in UIFont.familyNames {
@@ -25,7 +24,6 @@ struct ASFRootView: View {
             }
         }
     }
-    
     
     var body: some View {
         Group {
@@ -64,15 +62,3 @@ struct ASFRootView_Previews: PreviewProvider {
             .environmentObject(EmailAuthenticationViewModel())
     }
 }
-
-
-//MARK: - Font Testing Medthod
-//    init() {
-//        for familyName in UIFont.familyNames {
-//            print(familyName)
-//
-//            for fontName in UIFont.fontNames(forFamilyName: familyName) {
-//                print(" -- \(fontName)")
-//            }
-//        }
-//    }

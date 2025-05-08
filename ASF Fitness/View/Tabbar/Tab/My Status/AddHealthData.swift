@@ -6,10 +6,8 @@
 //
 
 import SwiftUI
- 
 
 struct AddHealthData: View {
-    
     @State private var steps: String = ""
     @State private var heartRate: String = ""
     @State private var traning: String = ""
@@ -18,7 +16,6 @@ struct AddHealthData: View {
     @State private var distance: String = ""
     @State private var isAlertView: Bool = false
     @State private var isStartLoader: Bool = false
-    
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var healthDataVM: HealthViewModel
     
@@ -231,10 +228,9 @@ struct AddHealthData: View {
             }
         }
         .onDisappear {
-           // healthDataVM.latestHealthData()
+            // healthDataVM.latestHealthData()
         }
     }
-    
     
     // ✅ Clear Fields
     func clearFields() {

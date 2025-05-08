@@ -11,7 +11,6 @@ import FirebaseAuth
 import GoogleSignIn
 import FirebaseMessaging
 
-
 @main
 struct ASF_FitnessApp: App {
     

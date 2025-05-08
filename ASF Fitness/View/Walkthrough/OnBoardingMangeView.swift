@@ -9,11 +9,9 @@ import SwiftUI
 
 struct OnBoardingMangeView: View {
     
-    @AppStorage("isWelcome") var isWelcome: Bool = false
-    
-    var timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
-    
     @State var count = 0
+    @AppStorage("isWelcome") var isWelcome: Bool = false
+    var timer = Timer.publish(every: 3, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
@@ -61,24 +59,5 @@ struct OnBoardingMangeView_Previews: PreviewProvider {
         OnBoardingMangeView()
             .environmentObject(GoogleAutheticationViewModel())
             .environmentObject(EmailAuthenticationViewModel())
-    }
-}
-
-struct PageControl: UIViewRepresentable {
-    
-    var current = 0
-    
-    func makeUIView(context: UIViewRepresentableContext<PageControl>) -> UIPageControl {
-        
-        let page = UIPageControl()
-        page.currentPageIndicatorTintColor = UIColor(Color("Primary"))
-        page.numberOfPages = 3
-        page.pageIndicatorTintColor = .gray
-        
-        return page
-    }
-    
-    func updateUIView(_ uiView: UIPageControl, context: UIViewRepresentableContext<PageControl>) {
-        uiView.currentPage = current
     }
 }

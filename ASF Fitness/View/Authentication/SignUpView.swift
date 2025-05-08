@@ -117,18 +117,6 @@ struct SignUpView: View {
                                 .fill(Color(UIColor(named: "textfileColor")!).opacity(0.5))
                         }
                     
-//                    TextField("Create Password", text: $createPassword)
-//                        .padding()
-//                        .foregroundColor(.black)
-//                        .autocorrectionDisabled(true)
-//                        .textContentType(.password)
-//                        .keyboardType(.default)
-//                        .background {
-//                            RoundedRectangle(cornerRadius: 35)
-//                                .fill(Color(UIColor(named: "textfileColor")!).opacity(0.5))
-//                        }
-                    
-                    
                     if isShowPass {
                         HStack {
                             TextField("Create Password", text: $createPassword)

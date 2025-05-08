@@ -16,7 +16,6 @@ struct AIChatView: View {
     @State private var isLoader: Bool = false
     @StateObject var geminiVM: AIChatViewModel = AIChatViewModel()
     @Environment(\.dismiss) var dismiss
-    
     @AppStorage("chatColorTheme") var chatColorTheme: ChatColorTheme = .lightBlue
     @AppStorage("AIChat") private var storedMessages: String = ""
     
@@ -184,7 +183,6 @@ struct AIChatView: View {
         }
     }
     
-    
     //MARK: - sentMessage
     func sentMessage(message: String) {
         withAnimation {
@@ -241,30 +239,5 @@ struct AIChatView: View {
 #Preview {
     NavigationView {
         AIChatView()
-    }
-}
-
-//MARK: - Fake Response data
-func replayMessage(message: String) -> String {
-    
-    let tempMessage = message.lowercased()
-    
-    if tempMessage.contains("hello") {
-        return "Hey there!"
-    }
-    else if tempMessage.contains("hi") {
-        return "Hey there!"
-    }
-    else if tempMessage.contains("goodbye") {
-        return "Talk to you later!"
-    }
-    else if tempMessage.contains("by") {
-        return "Talk to you later!"
-    }
-    else if tempMessage.contains("how are you") {
-        return "I'm fine, how about you?"
-    }
-    else {
-        return "That's cool."
     }
 }

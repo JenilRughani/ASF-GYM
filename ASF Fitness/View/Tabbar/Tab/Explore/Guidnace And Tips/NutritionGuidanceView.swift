@@ -114,7 +114,7 @@ struct NutritionGuidanceView: View {
                                         HStack {
                                             Text("READ MORE")
                                                 .font(.caustenFont(customFontName: .CaustenMedium, fontSize: 16))
-                                            .foregroundStyle(Color("bluePurple"))
+                                                .foregroundStyle(Color("bluePurple"))
                                             
                                             Spacer()
                                             

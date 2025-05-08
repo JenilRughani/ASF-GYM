@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25D43D372DCD253D00CD726D /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D43D362DCD253D00CD726D /* PageControl.swift */; };
 		291567F12D930ECC00287FAB /* ListOfRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291567F02D930ECC00287FAB /* ListOfRecipeView.swift */; };
 		291567F32D930ED500287FAB /* DetailsOfRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291567F22D930ED500287FAB /* DetailsOfRecipeView.swift */; };
 		291567F52D930F9B00287FAB /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291567F42D930F9B00287FAB /* RecipeViewModel.swift */; };
@@ -114,6 +115,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25D43D362DCD253D00CD726D /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		291567F02D930ECC00287FAB /* ListOfRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRecipeView.swift; sourceTree = "<group>"; };
 		291567F22D930ED500287FAB /* DetailsOfRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOfRecipeView.swift; sourceTree = "<group>"; };
 		291567F42D930F9B00287FAB /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				295919DF2D8F00F8006CE7D5 /* CornerRadiusShap.swift */,
 				295E491F2D95A8A000A7ED80 /* MarqueeText.swift */,
 				294696A62D9BD50B0006E0E1 /* CustomTabItem.swift */,
+				25D43D362DCD253D00CD726D /* PageControl.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -722,6 +725,7 @@
 				295E49202D95A8A000A7ED80 /* MarqueeText.swift in Sources */,
 				29B2229A2D9410B40050B52E /* HealthFitnessView.swift in Sources */,
 				705CB05F29CB0B2C00CFBBC2 /* ASFCapsuleButtonStyle.swift in Sources */,
+				25D43D372DCD253D00CD726D /* PageControl.swift in Sources */,
 				7026BE0029CC586200BCCB4C /* GFunction.swift in Sources */,
 				295919C32D8ECC4A006CE7D5 /* Share+UIViewControllerRepresentable.swift in Sources */,
 				29CFDB442D82A4C000A51E09 /* WorkoutModel.swift in Sources */,

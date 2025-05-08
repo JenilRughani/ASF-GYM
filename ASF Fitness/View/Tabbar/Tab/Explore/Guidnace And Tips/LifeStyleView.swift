@@ -191,9 +191,9 @@ struct LifeStyleView: View {
                 }
                 .padding(.horizontal)
             }
-         
+            
             if isStartLoader {
-               CustomLoadingview(isShowing: isStartLoader)
+                CustomLoadingview(isShowing: isStartLoader)
             }
         }
     }

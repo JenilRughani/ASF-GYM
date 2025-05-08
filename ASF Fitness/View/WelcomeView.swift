@@ -12,14 +12,12 @@ struct WelcomeView: View {
     @State private var isLogin: Bool = false
     @State private var isRegister: Bool = false
     @State private var isLoading: Bool = false
-    private var heightAndWidth: CGFloat = 25
-    private var colors: [Color] = [Color("lightPink"), Color("lightBlue"), Color("lightYellow"), .white, .white]
-    
     @State private var isEmptyAlert: Bool = false
     @State private var isSignUp: Bool? = false
-    
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var googleAuthVM : GoogleAutheticationViewModel
+    private var heightAndWidth: CGFloat = 25
+    private var colors: [Color] = [Color("lightPink"), Color("lightBlue"), Color("lightYellow"), .white, .white]
     
     var body: some View {
         ZStack {
@@ -35,7 +33,7 @@ struct WelcomeView: View {
                 
                 VStack(spacing: 10) {
                     
-                   Image("app_degine_icone_remove_bg")
+                    Image("app_degine_icone_remove_bg")
                         .resizable()
                         .frame(width: 160, height: 160)
                     
@@ -49,61 +47,13 @@ struct WelcomeView: View {
                     }
                     .padding(.bottom)
                     
-                    /*
-                    //MARK: - Login Button
-                    HStack {
-                        Button(action: {
-                           isLogin = true
-                        }, label: {
-                            Text("Login")
-                                .font(.title3)
-                                .foregroundColor(.white)
-                                .fontWeight(.bold)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                        })
-                        .background{
-                            Capsule()
-                                .fill(Color("bluePurple"))
-                        }
-                        .navigationDestination(isPresented: $isLogin) {
-                            SignInView()
-                                .navigationBarBackButtonHidden()
-                        }
-                        
-                        Button(action: {
-                           isRegister = true
-                        }, label: {
-                            Text("Register")
-                                .font(.title3)
-                                .foregroundColor(.white)
-                                .fontWeight(.bold)
-                                .padding()
-                                .frame(maxWidth: .infinity)
-                        })
-                        .background{
-                            Capsule()
-                                .fill(Color("bluePurple"))
-                        }
-                        .navigationDestination(isPresented: $isRegister) {
-                            SignUpView().navigationBarBackButtonHidden()
-                        }
-                    }
-                    
-                    //MARK: - Social Media
-                    Text("- - - -  OR  - - - -")
-                        .font(.headline)
-                        .foregroundColor(.gray)
-                        .padding()
-                    */
-                    
                     Text("just a few clicks, you can find a workout\n that fits your schedule and start exercising\n right away.")
                         .font(.caustenFont(customFontName: .CaustenMedium, fontSize: 16))
                         .foregroundStyle(.gray)
                         .lineLimit(3)
                         .multilineTextAlignment(.center)
                     
-                     
+                    
                     //MARK: - Google Authentication
                     Button {
                         googleAuthVM.signIn()

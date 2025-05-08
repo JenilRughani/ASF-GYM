@@ -18,7 +18,6 @@ struct ContactUsview: View {
     @State private var showMailView = false
     @State private var mailResult: Result<MFMailComposeResult, Error>? = nil
 
-    
     var body: some View {
         ZStack {
             VStack {

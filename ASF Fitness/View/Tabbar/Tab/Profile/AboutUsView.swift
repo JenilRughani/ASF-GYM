@@ -30,7 +30,7 @@ struct AboutUsView: View {
                                 Image("ASF")
                                     .resizable()
                                     .scaledToFit()
-                                                .frame(width: 130)
+                                    .frame(width: 130)
                                     .foregroundStyle(.white)
                             }
                     }

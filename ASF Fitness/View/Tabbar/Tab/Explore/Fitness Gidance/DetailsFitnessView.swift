@@ -14,7 +14,7 @@ struct DetailsFitnessView: View {
         ZStack {
             Color.purple
                 .ignoresSafeArea()
-           
+            
             VStack {
                 BackView()
                 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WalkthroughView: View {
-
+    
     @State var image: String
     @State var title: String
     @State var description: String
@@ -31,11 +31,12 @@ struct WalkthroughView: View {
             Text(description)
                 .multilineTextAlignment(.center)
                 .font(.caustenFont(customFontName: .CaustenRegular, fontSize: 16))
-
+            
             Spacer()
         }
     }
 }
+
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
         WalkthroughView(image: "onBordingImg1", title: "Testing Title", description: "This is Sample Paragraph. This is Sample Paragraph This is Sample Paragraph This is Sample Paragraph This is Sample Paragraph")

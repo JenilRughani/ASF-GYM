@@ -20,7 +20,7 @@ struct GuidanceAndTipsView: View {
                 .scaledToFit()
                 .frame(height: 110)
                 .foregroundStyle(.pink)
-                
+            
             Text(name)
                 .font(Font.caustenFont(customFontName: .CaustenBold, fontSize: 18))
                 .multilineTextAlignment(.center)

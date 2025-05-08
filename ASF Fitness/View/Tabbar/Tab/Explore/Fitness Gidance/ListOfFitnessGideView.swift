@@ -35,9 +35,8 @@ struct ListOfFitnessGideView: View {
                     Spacer()
                 }
                 .padding()
-            
+                
                 ScrollView(showsIndicators: false) {
-                    
                     VStack {
                         
                         Image("yoga1")

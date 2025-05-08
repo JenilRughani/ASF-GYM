@@ -15,7 +15,6 @@ struct ListOfHealthFitnessView: View {
     var body: some View {
         ZStack {
             VStack {
-               
                 HStack {
                     Button(action: {
                         dismiss.callAsFunction()

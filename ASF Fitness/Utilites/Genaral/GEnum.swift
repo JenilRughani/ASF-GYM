@@ -58,3 +58,13 @@ enum FirebaseSubCollection: String {
     case userInfoDetails = "UserInfoDetails"
     case userFunDetails = "AppDetails"
 }
+
+//MARK: - FontName
+enum FontName: String {
+    case CaustenBold
+    case CaustenRegular
+    case CaustenSemiBold
+    case CaustenBlack
+    case CaustenExtraBold
+    case CaustenMedium
+}

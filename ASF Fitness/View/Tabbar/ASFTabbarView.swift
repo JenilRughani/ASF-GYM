@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ASFTabbarView: View {
-   
+    
     @State private var verification: LoginVerification = .EmailAndPassAuth
-    
-    @AppStorage("welcomeNotify") var isWelcomeNotify: Bool = true
-    
     @StateObject var healthDataVM = HealthViewModel()
     @StateObject private var notificationManager = NotificationManagerViewModel()
-    
     @EnvironmentObject var emailAuthVM : EmailAuthenticationViewModel
     @EnvironmentObject var googleAuthVM : GoogleAutheticationViewModel
-    
+    @AppStorage("welcomeNotify") var isWelcomeNotify: Bool = true
     @AppStorage("userInfoDetail") var userInfoDetail: Data = Data()
     
     var body: some View {
@@ -59,8 +55,7 @@ struct ASFTabbarView: View {
         .environmentObject(healthDataVM)
         .onAppear() {
             
-         //TODO:- Add the Firebase get User details Info
-            
+            //TODO:- Add the Firebase get User details Info
             userDetails?.login = loadUserInfo(userInfoData: userInfoDetail)?.login ?? LoginVerification.EmailAndPassAuth
             userDetails?.fName = loadUserInfo(userInfoData: userInfoDetail)?.fName ?? "-"
             email = loadUserInfo(userInfoData: userInfoDetail)?.email ?? "-"
@@ -76,7 +71,7 @@ struct ASFTabbarView: View {
             notificationManager.requestAuthNotify { result in
                 switch result {
                 case .success( _):
-                   print("Sucuss")
+                    print("Sucuss")
                 case .failure(let failure):
                     isWelcomeNotify = false
                     print(failure.localizedDescription)
@@ -103,4 +98,3 @@ struct ASFTabbarView_Previews: PreviewProvider {
         }
     }
 }
-

@@ -8,20 +8,9 @@
 import Foundation
 import SwiftUI
 
-enum FontName: String {
-    case CaustenBold
-    case CaustenRegular
-    case CaustenSemiBold
-    case CaustenBlack
-    case CaustenExtraBold 
-    case CaustenMedium
-}
-
 //MARK: - Extenstion Font...
 extension Font {
     static func caustenFont(customFontName : FontName, fontSize : CGFloat) -> Font {
-        //return Font.custom(customFontName.rawValue, size: fontSize)
-        
         switch customFontName {
         case .CaustenBold:
             return Font.system(size: fontSize, weight: .bold, design: .rounded)

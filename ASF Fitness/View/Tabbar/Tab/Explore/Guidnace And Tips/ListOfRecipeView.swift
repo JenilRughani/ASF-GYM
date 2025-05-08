@@ -53,7 +53,7 @@ struct ListOfRecipeView: View {
                             ForEach(recipeVM.arrResponseText) { res in
                                 //TODO:- Can't Push DetailsOfRecipeView
                                 NavigationLink {
-                                 DetailsOfRecipeView(recipeDetails: res)
+                                    DetailsOfRecipeView(recipeDetails: res)
                                         .navigationBarBackButtonHidden()
                                 } label: {
                                     RecipeListView(res: res)
