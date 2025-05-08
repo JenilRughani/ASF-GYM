@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "portrait-gorgeous-body-positive-latin-woman-pink-sports-hoodie-exercising-with-dumbbells-pink-removebg-preview.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
