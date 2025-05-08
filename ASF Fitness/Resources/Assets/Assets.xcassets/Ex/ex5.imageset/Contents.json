@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "athlete-stretching-gym-portrait-woman-with-towel-fitness-wellness-with-confidence-serious-model-healthy-sports-person-ready-workout-training-arms-exercise-warm-up-club_590464-266288-removebg-preview.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
