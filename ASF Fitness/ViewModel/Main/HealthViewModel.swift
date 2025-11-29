@@ -21,7 +21,7 @@ class HealthViewModel: ObservableObject {
         requestHealthAuthorization()
     }
     
-    // ✅ Request HealthKit Authorization
+    // Request HealthKit Authorization
     func requestHealthAuthorization() {
         let typesToShare: Set = [
             HKObjectType.quantityType(forIdentifier: .stepCount)!,
@@ -46,7 +46,7 @@ class HealthViewModel: ObservableObject {
         }
     }
     
-    // ✅ Save Data to UserDefaults
+    // Save Data to UserDefaults
     func saveData() {
         if let encoded = try? JSONEncoder().encode(healthData) {
             UserDefaults.standard.set(encoded, forKey: key)
@@ -54,7 +54,7 @@ class HealthViewModel: ObservableObject {
         }
     }
     
-    // ✅ Load Data from UserDefaults
+    // Load Data from UserDefaults
     func loadData() {
         if let savedData = UserDefaults.standard.data(forKey: key),
            let decodedData = try? JSONDecoder().decode([HealthModel].self, from: savedData) {
@@ -62,7 +62,7 @@ class HealthViewModel: ObservableObject {
         }
     }
     
-    // ✅ Add New Health Data (Local + HealthKit)
+    // Add New Health Data (Local + HealthKit)
     func addHealthData(steps: String, heartRate: String, training: String, calories: String, sleep: String, distance: String) {
         let newData = HealthModel(
             steps: steps,
@@ -81,7 +81,7 @@ class HealthViewModel: ObservableObject {
         saveToHealthKit(steps: steps, heartRate: heartRate, calories: calories, sleep: sleep, distance: distance)
     }
     
-    // ✅ Save to Apple Health
+    // Save to Apple Health
     func saveToHealthKit(steps: String, heartRate: String, calories: String, sleep: String, distance: String) {
         let now = Date()
         
@@ -146,7 +146,7 @@ class HealthViewModel: ObservableObject {
         }
     }
     
-    // ✅ Delete Health Data
+    //  Delete Health Data
     func deleteHealthData(at offsets: IndexSet) {
         DispatchQueue.main.async {
             withAnimation {
@@ -157,7 +157,7 @@ class HealthViewModel: ObservableObject {
         }
     }
     
-    // ✅ Get Latest Health Data
+    //  Get Latest Health Data
     func latestHealthData() -> HealthModel? {
         return healthData.last
     }

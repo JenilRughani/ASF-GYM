@@ -38,11 +38,9 @@ class AIChatViewModel: ObservableObject {
         ]
         
         do {
-            // ✅ Encode JSON request
             let jsonData = try JSONSerialization.data(withJSONObject: requestBody)
             request.httpBody = jsonData
             
-            // ✅ Fetch the response
             let (data, response) = try await URLSession.shared.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {

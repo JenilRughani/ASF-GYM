@@ -232,7 +232,7 @@ struct AddHealthData: View {
         }
     }
     
-    // ✅ Clear Fields
+    //  Clear Fields
     func clearFields() {
         steps = ""
         heartRate = ""

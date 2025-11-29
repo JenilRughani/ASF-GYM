@@ -11,7 +11,7 @@ import Combine
 class FirebaseManager: ObservableObject {
     private var db = Firestore.firestore()
     
-    // ✅ Create or Update Dynamic Data
+    //  Create or Update Dynamic Data
     func saveData(email: String, collection: FirebaseMainCollection, documentId: String, data: [String: Any], completion: @escaping (Result<Void, Error>) -> Void) {
         db.collection(email).document(collection.rawValue).setData(data) { error in
             if let error = error {
@@ -22,7 +22,7 @@ class FirebaseManager: ObservableObject {
         }
     }
     
-    // ✅ Read Dynamic Data
+    //  Read Dynamic Data
     func fetchData(email: String, collection: FirebaseMainCollection, completion: @escaping (Result<[FirebaseDataModel], Error>) -> Void) {
         db.collection(email).document(collection.rawValue).getDocument { snapshot, error in
             if let error = error {
@@ -40,7 +40,7 @@ class FirebaseManager: ObservableObject {
         }
     }
     
-    // ✅ Update Dynamic Data
+    //  Update Dynamic Data
     func updateData(email: String, collection: FirebaseMainCollection, documentId: String, newData: [String: Any], completion: @escaping (Result<Void, Error>) -> Void) {
         db.collection(email).document(collection.rawValue).updateData(newData) { error in
             if let error = error {
@@ -51,7 +51,7 @@ class FirebaseManager: ObservableObject {
         }
     }
     
-    // ✅ Delete Dynamic Data
+    //  Delete Dynamic Data
     func deleteData(email: String, collection: FirebaseMainCollection, documentId: String, completion: @escaping (Result<Void, Error>) -> Void) {
         db.collection(email).document(collection.rawValue).delete { error in
             if let error = error {
